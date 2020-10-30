@@ -8,9 +8,8 @@ router.get('', (req, res) => {
     });
 })
 
-router.get('/:id', (res, req) => {
+router.get('/:id', (req, res) => {
     const rentalId = req.params.id;
-
     Rental.findById(rentalId, (err, foundRentals) => {
         if(err) {
             res.status(422).send({errors:[{titel: 'Rental Error', detail: 'Could not find Rental!'}]});
@@ -20,5 +19,6 @@ router.get('/:id', (res, req) => {
 
     });
 })
+
 
 module.exports = router;
