@@ -8,7 +8,7 @@ export class RentalListing extends Component {
  
 
   componentWillMount() {
-    this.props.dispatch(actions.fetchRental())
+    this.props.dispatch(actions.fetchRentals())
   }
 
   render() {
